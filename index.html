@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Changer</title>
+<style>
+  /* CSS for styling the page */
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>Some Awesome Moon Pic</h2>
+  <br>
+  <img id="displayedImage" src="https://img.freepik.com/premium-vector/pixel-art-moon-stars-vector-illustration_38133-23.jpg?w=2000" alt="Displayed Image">
+<br>
+  <select id="imageSelector">
+    <option value="https://img.freepik.com/premium-vector/pixel-art-moon-stars-vector-illustration_38133-23.jpg?w=2000">144p</option>
+    <option value="https://png.pngtree.com/png-vector/20230906/ourmid/pngtree-pixel-art-moon-png-image_10008610.png">360p</option>
+    <option value="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/1200px-FullMoon2010.jpg">720p</option>
+    <option value="pas.png">2160p</option>
+
+  </select>
+
+</div>
+
+<script>
+  // JavaScript for changing the image when a different option is chosen
+  document.getElementById('imageSelector').addEventListener('change', function() {
+    var selectedImage = document.getElementById('imageSelector').value;
+    document.getElementById('displayedImage').src = selectedImage;
+  });
+</script>
+</body>
+</html>
